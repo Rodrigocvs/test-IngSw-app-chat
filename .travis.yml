@@ -1,0 +1,18 @@
+languaje: node_js
+node_js: 
+- 10.16.0
+cache: yarn
+
+install:
+- yarn install
+
+scripts:
+- yarn test
+- yarn run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUG_TOKEN
+  on:
+    branch: gb-pages
